@@ -96,7 +96,7 @@ class UserController extends Controller
          $response = array();
          $cell     = \Input::get('cell');
          $password = \Input::get('password');
-         $data     = UserNew::where('email','=',$cell)->first();
+         $data     = UserNew::where('cellphone','=',$cell)->first();
          $device   = \Request::header('User-Agent');
 
 
@@ -114,7 +114,7 @@ class UserController extends Controller
          {
             $response["error"]     = false;
             $response['name']      = $data->name;
-            $response['cell_no']   = $data->email;
+            $response['cell_no']   = $data->cellphone;
             $response['apiKey']    = $data->api_key;
             $response['api_key']   = $key;
             $response['createdAt'] = $data->created_at;
@@ -146,7 +146,7 @@ class UserController extends Controller
          $cell     = \Input::get('cell');
          $password = \Input::get('password');
          \Log::info('Password Change: User '.$cell ."New Password".$password );
-         $userNew  = UserNew::where('email','=',$cell)->first();
+         $userNew  = UserNew::where('cellphone','=',$cell)->first();
 
 
          if (sizeof($userNew) > 0)
