@@ -5,6 +5,6 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
 class DepartmentSubSubCategory extends Eloquent
 {
 
-    protected $table    = 'sub-sub-categories';
+    protected $table    = 'sub_sub_categories';
 
 }

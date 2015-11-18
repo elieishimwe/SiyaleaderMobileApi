@@ -6,7 +6,7 @@ class CaseOwner extends Eloquent
 {
 
 
-    protected $table    = 'caseOwners';
-    protected $fillable = ['caseId','user','type','active'];
+    protected $table    = 'cases_owners';
+    protected $fillable = ['case_id','user','type','active'];
 
 }
